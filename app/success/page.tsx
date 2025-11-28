@@ -1,4 +1,4 @@
-// app/success/page.tsx
+// app/success/page.tsx - Update the download function
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -23,14 +23,18 @@ export default function SuccessPage() {
 
   const handleDownload = () => {
     if (ebook?.downloadUrl) {
-      // In a real app, this would trigger the actual download
-      // For demo, we'll just simulate it
-      const link = document.createElement('a');
-      link.href = ebook.downloadUrl;
-      link.download = `${ebook.title.replace(/\s+/g, '-').toLowerCase()}.pdf`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      // For Google Drive links, open in new tab
+      if (ebook.downloadUrl.includes('drive.google.com')) {
+        window.open(ebook.downloadUrl, '_blank');
+      } else {
+        // For local files, use download method
+        const link = document.createElement('a');
+        link.href = ebook.downloadUrl;
+        link.download = `${ebook.title.replace(/\s+/g, '-').toLowerCase()}.pdf`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
       
       setDownloadCount(prev => Math.max(0, prev - 1));
     }
@@ -65,6 +69,7 @@ export default function SuccessPage() {
 
           <div className="bg-gray-50 rounded-lg p-6 mb-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-2">{ebook.title}</h2>
+            <p className="text-gray-600 mb-2">Category: {ebook.category}</p>
             <p className="text-gray-600">You have {downloadCount} downloads remaining</p>
           </div>
 
@@ -73,8 +78,18 @@ export default function SuccessPage() {
             disabled={downloadCount === 0}
             className="w-full bg-green-600 text-white py-4 rounded-lg font-semibold hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition duration-300 mb-4"
           >
-            {downloadCount > 0 ? 'Download Ebook' : 'No Downloads Remaining'}
+            {downloadCount > 0 ? 
+              (ebook.downloadUrl?.includes('drive.google.com') ? 
+                'View on Google Drive' : 'Download Ebook') 
+              : 'No Downloads Remaining'
+            }
           </button>
+
+          {ebook.downloadUrl?.includes('drive.google.com') && (
+            <p className="text-sm text-blue-600 mb-4">
+              📎 This ebook is hosted on Google Drive and will open in a new tab
+            </p>
+          )}
 
           <p className="text-sm text-gray-500 mb-6">
             The download link will also be sent to your email for future access.
