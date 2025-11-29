@@ -53,7 +53,7 @@ export const videos: Video[] = [
   },
   {
     id: 6,
-    title: "The Secrets of Tutankhamun’s Tomb",
+    title: "Roman Pagan Life and Worship",
     description: "A documentary exploring the discovery, treasures, and historical significance of King Tutankhamun’s tomb — shedding light on ancient Egypt’s burial practices.",
     youtubeUrl: 'https://youtu.be/Qw3CjmoB3oY',
     duration: '50:30',
@@ -68,3 +68,4 @@ export const videos: Video[] = [
     category: 'Documentary',
   },
 ];
+// https://youtu.be/Qw3CjmoB3oY
