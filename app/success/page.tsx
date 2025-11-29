@@ -17,17 +17,15 @@ export default function SuccessPage() {
   useEffect(() => {
     if (ebookId) {
       const foundEbook = ebooks.find(e => e.id === parseInt(ebookId));
-      setEbook(foundEbook || null);
+      setEbook(foundEbook);
     }
   }, [ebookId]);
 
   const handleDownload = () => {
     if (ebook?.downloadUrl) {
-      // For Google Drive links, open in new tab
       if (ebook.downloadUrl.includes('drive.google.com')) {
         window.open(ebook.downloadUrl, '_blank');
       } else {
-        // For local files, use download method
         const link = document.createElement('a');
         link.href = ebook.downloadUrl;
         link.download = `${ebook.title.replace(/\s+/g, '-').toLowerCase()}.pdf`;
@@ -96,7 +94,7 @@ export default function SuccessPage() {
           </p>
 
           <div className="flex gap-4">
-            <Link href="/ebooks" className="flex-1 btn-secondary text-center">
+            <Link href="/ebooks" className="flex-1 btn-secondary text-center border-2 border-black justify-center text-black py-3 rounded-lg font-semibold hover:bg-gray-200 transition duration-300">
               Browse More
             </Link>
             <button

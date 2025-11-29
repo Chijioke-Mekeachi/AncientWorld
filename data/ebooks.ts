@@ -11,7 +11,7 @@ export const ebooks: Ebook[] = [
     category: "Military History",
     pages: 215,
     format: "PDF",
-    downloadUrl: "https://drive.google.com/file/d/1bwfACcOghl9YDCpB8u3y0H1a7U38k9KO/view?usp=drive_link"
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1bwfACcOghl9YDCpB8u3y0H1a7U38k9KO"
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ export const ebooks: Ebook[] = [
     category: "Religion",
     pages: 180,
     format: "PDF",
-    downloadUrl: "https://drive.google.com/file/d/1rQ9-6DZisYb-St3o1me8j4crgnrXsFsx/view?usp=drive_link"
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1rQ9-6DZisYb-St3o1me8j4crgnrXsFsx"
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ export const ebooks: Ebook[] = [
     category: "Fiction",
     pages: 165,
     format: "PDF",
-    downloadUrl: "https://drive.google.com/file/d/1O_NoELnGVr6cq66ZjdTXCP4xWkVm3dJy/view?usp=drive_link"
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1O_NoELnGVr6cq66ZjdTXCP4xWkVm3dJy"
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ export const ebooks: Ebook[] = [
     category: "Military Science",
     pages: 198,
     format: "PDF",
-    downloadUrl: "https://drive.google.com/file/d/1bwfACcOghl9YDCpB8u3y0H1a7U38k9KO/view?usp=drive_link"
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1bwfACcOghl9YDCpB8u3y0H1a7U38k9KO"
   },
   {
     id: 5,
