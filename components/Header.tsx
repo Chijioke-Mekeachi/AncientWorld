@@ -8,7 +8,7 @@ export default function Header() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-yellow-500 via-brown-500 to-red-400 bg-clip-text text-transparent">
-             Windows to The AncientWorld
+             Windows to The Ancient-World
             </Link>
           </div>
           <div className="flex items-center space-x-8">
