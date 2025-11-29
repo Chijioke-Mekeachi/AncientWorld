@@ -108,12 +108,7 @@ export default function FeaturedBooks({ ebooks }: FeaturedBooksProps) {
                     >
                       Download
                     </button>
-                    <button 
-                      className="bg-gray-200 text-gray-700 py-2 px-3 rounded-lg text-sm font-semibold hover:bg-gray-300 transition duration-200"
-                      title="Preview"
-                    >
-                      👁️
-                    </button>
+                    
                   </div>
                 </div>
 
