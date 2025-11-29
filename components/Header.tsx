@@ -17,6 +17,9 @@ export default function Header() {
             <Link href="/" className="text-gray-700 hover:text-gray-900 font-medium">
               Home
             </Link>
+            <Link href="/videos" className="text-gray-700 hover:text-gray-900 font-medium">
+            Videos
+            </Link>
             <Link 
               href="/ebooks" 
               className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-gradient-to-r hover:from-yellow-500 hover:via-brown-500 hover:to-red-400 transition ease-in duration-300"
