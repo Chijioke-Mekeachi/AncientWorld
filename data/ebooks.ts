@@ -4,7 +4,7 @@ import { Ebook } from '@/types';
 export const ebooks: Ebook[] = [
   {
     id: 1,
-    title: "70 Years Military Crushing",
+    title: "70 Years Military Crushing Of The Jewish Philosophy",
     description: `Between 66 and 136 CE, Rome fought not merely to conquer a people, but to silence a philosophy. The 70 Years Military Crushing of the Jewish Philosophy explores this seventy-year conflict—from the fall of Jerusalem to the suppression of Bar Kokhba—as a moral and intellectual struggle between two worldviews.
 
 Where Rome sought to replace conscience with order, Israel defended the idea that divine law stands above imperial power. Beneath the battles and ruins, a deeper war unfolded: between faith and empire, memory and administration, revelation and control.
