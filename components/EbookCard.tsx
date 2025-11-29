@@ -31,7 +31,7 @@ export default function EbookCard({ ebook }: EbookCardProps) {
             {ebook.title}
           </h3>
           <span className="bg-blue-100 text-blue-800 text-sm font-semibold px-2 py-1 rounded ml-2">
-            ${ebook.price}
+            NGN {ebook.price}
           </span>
         </div>
 
