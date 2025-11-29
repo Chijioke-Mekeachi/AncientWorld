@@ -1,10 +1,10 @@
-// components/FeaturedBooks.tsx
 'use client';
 
 import { useState } from 'react';
 import { Ebook } from '@/types';
 import EbookCard from './EbookCard';
 import PaymentModal from './PaymentModal';
+import Image from 'next/image';
 
 interface FeaturedBooksProps {
   ebooks: Ebook[];
@@ -28,6 +28,7 @@ export default function FeaturedBooks({ ebooks }: FeaturedBooksProps) {
     <>
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           {/* Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -45,31 +46,28 @@ export default function FeaturedBooks({ ebooks }: FeaturedBooksProps) {
                 key={ebook.id} 
                 className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
               >
-                {/* Featured Badge for first book */}
+                
+                {/* Bestseller badge */}
                 {index === 0 && (
                   <div className="absolute -top-3 -left-3 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10 shadow-lg">
                     🔥 Bestseller
                   </div>
                 )}
 
-                {/* Book Cover with Category-based Colors */}
-                <div className={`relative h-48 rounded-t-2xl overflow-hidden ${
-                  ebook.category.includes('Military') ? 'bg-gradient-to-br from-gray-700 to-red-800' :
-                  ebook.category.includes('Religion') ? 'bg-gradient-to-br from-purple-600 to-blue-700' :
-                  ebook.category.includes('Fiction') ? 'bg-gradient-to-br from-green-500 to-teal-600' :
-                  'bg-gradient-to-br from-blue-500 to-purple-600'
-                }`}>
-                  <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-white text-5xl">
-                      {ebook.category.includes('Military') ? '⚔️' :
-                       ebook.category.includes('Religion') ? '🕍' :
-                       ebook.category.includes('Fiction') ? '🌈' : '📚'}
-                    </span>
-                  </div>
+                {/* Book Image */}
+                <div
+                  className={`relative h-48 rounded-t-2xl overflow-hidden flex items-center justify-center bg-gray-100`}
+                >
+                  <Image
+                    src={ebook.image}
+                    alt={ebook.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, 300px"
+                  />
                   
                   {/* Quick Action Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-40 transition duration-300">
                     <button
                       onClick={() => handleQuickBuy(ebook)}
                       className="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition duration-200 transform scale-95 group-hover:scale-100"
@@ -86,7 +84,7 @@ export default function FeaturedBooks({ ebooks }: FeaturedBooksProps) {
                       {ebook.title}
                     </h3>
                     <span className="bg-blue-100 text-blue-800 text-sm font-semibold px-2 py-1 rounded flex-shrink-0">
-                      ${ebook.price}
+                      Free
                     </span>
                   </div>
 
@@ -96,12 +94,10 @@ export default function FeaturedBooks({ ebooks }: FeaturedBooksProps) {
 
                   <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
                     <span className="flex items-center">
-                      <span className="mr-1">📖</span>
-                      {ebook.pages} pages
+                      📖 {ebook.pages} pages
                     </span>
                     <span className="flex items-center">
-                      <span className="mr-1">📄</span>
-                      {ebook.format}
+                      📄 {ebook.format}
                     </span>
                   </div>
 
@@ -110,7 +106,7 @@ export default function FeaturedBooks({ ebooks }: FeaturedBooksProps) {
                       onClick={() => handleQuickBuy(ebook)}
                       className="flex-1 bg-blue-600 text-white py-2 px-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition duration-200"
                     >
-                      Buy Now
+                      Download
                     </button>
                     <button 
                       className="bg-gray-200 text-gray-700 py-2 px-3 rounded-lg text-sm font-semibold hover:bg-gray-300 transition duration-200"
@@ -123,15 +119,11 @@ export default function FeaturedBooks({ ebooks }: FeaturedBooksProps) {
 
                 {/* Category Tag */}
                 <div className="absolute top-4 right-4">
-                  <span className={`bg-white bg-opacity-90 text-gray-700 px-2 py-1 rounded-full text-xs font-medium ${
-                    ebook.category.includes('Military') ? 'border-l-4 border-red-500' :
-                    ebook.category.includes('Religion') ? 'border-l-4 border-purple-500' :
-                    ebook.category.includes('Fiction') ? 'border-l-4 border-green-500' :
-                    'border-l-4 border-blue-500'
-                  }`}>
+                  <span className="bg-white bg-opacity-90 text-gray-700 px-2 py-1 rounded-full text-xs font-medium border-l-4 border-blue-500">
                     {ebook.category}
                   </span>
                 </div>
+
               </div>
             ))}
           </div>
@@ -158,7 +150,6 @@ export default function FeaturedBooks({ ebooks }: FeaturedBooksProps) {
         </div>
       </section>
 
-      {/* Payment Modal */}
       <PaymentModal
         ebook={selectedEbook}
         isOpen={isModalOpen}

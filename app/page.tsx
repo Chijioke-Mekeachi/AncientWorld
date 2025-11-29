@@ -7,7 +7,7 @@ import FeaturedBooks from '@/components/FeaturedBooks';
 
 export default function Home() {
   // Get the first 4 books (which now include your actual books)
-  const featuredEbooks = ebooks.slice(0, 4);
+  const featuredEbooks = ebooks.slice(0, 3);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

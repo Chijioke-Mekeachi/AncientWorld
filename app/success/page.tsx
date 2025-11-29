@@ -82,7 +82,7 @@ export default function SuccessPage() {
           >
             {downloadCount > 0 ? 
               (ebook.downloadUrl?.includes('drive.google.com') ? 
-                'View on Google Drive' : 'Download Ebook') 
+                'Download Now' : 'Download Ebook') 
               : 'No Downloads Remaining'
             }
           </button>
