@@ -32,14 +32,14 @@ Written in accessible language yet grounded in rigorous research, The 70 Years M
 This book is that story.`,
     price: 2000.00,
     image: "/3 COVER PAGE 70 YEARS.png",
-    category: "Military History",
+    category: "Religion",
     pages:31,
     format: "EPUB",
     downloadUrl: "https://drive.google.com/uc?export=download&id=1bwfACcOghl9YDCpB8u3y0H1a7U38k9KO"
   },
   {
     id: 2,
-    title: "A Better Understanding of Judaism",
+    title: "A Better Understanding of Judaism ",
     description: `Judaism’s Pre-Christian Intellectual and Moral Defense is a guided journey into a world that shaped the conscience of humanity long before the first Christian sermon was preached. It invites readers to meet ancient Judaism not as a shadow behind later religions, but as a fully formed civilization of thought—an intellectual tradition that reasoned about God, argued for justice, and defended moral truth in the face of the greatest empires of the ancient world.
 
 For over a thousand years before Christianity emerged, the Jewish people were already engaged in a profound and public struggle: how to live faithfully under foreign powers without losing their spiritual identity, and how to speak about the one God in societies saturated with many gods. This book traces that struggle as a long, deliberate defense of faith through reason, law, ethics, and historical interpretation. It shows that Judaism did not merely survive exile, conquest, and cultural pressure; it responded intelligently to them, producing one of the ancient world’s strongest moral and philosophical foundations.
