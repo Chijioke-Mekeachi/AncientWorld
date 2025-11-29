@@ -17,10 +17,10 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Transform Your <span className="text-yellow-300">Knowledge</span>
+            Discover <span className="bg-gradient-to-r from-orange-500 via-brown-500 to-yellow-500 bg-clip-text text-transparent">Ancient Wisdom</span> for Modern Times
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Discover premium ebooks that will help you grow, learn new skills, and achieve your goals.
+            Journey Through time with meticulously researched articules and books that bring ancient civilization to life. Explor philosophies, Histories, and traditions that shaped our world.
           </p>
           <Link 
             href="/ebooks"
