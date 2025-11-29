@@ -94,7 +94,7 @@ export default function FeaturedBooks({ ebooks }: FeaturedBooksProps) {
 
                   <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
                     <span className="flex items-center">
-                      📖 {ebook.pages} pages
+                      📖 {ebook.pages} Chapters
                     </span>
                     <span className="flex items-center">
                       📄 {ebook.format}
