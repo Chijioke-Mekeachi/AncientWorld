@@ -87,7 +87,7 @@ export default function DescriptionModal({ ebook, isOpen, onClose, onProceedToBu
                         {ebook.title}
                     </h1>
                     <p className="text-lg text-blue-600 font-semibold mb-6 border-b pb-4">
-                        By: {'Windows To The Ancient World Team'}
+                        By: {'Dr. Ishiusah Chijioke'}
                     </p>
 
                     <h2 className="text-2xl font-bold text-gray-800 mb-3">
