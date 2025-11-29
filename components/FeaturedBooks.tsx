@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import { Ebook } from '@/types';
-import EbookCard from './EbookCard';
+// import EbookCard from './EbookCard'; // EbookCard is not used in the original code, removed import
 import PaymentModal from './PaymentModal';
+import DescriptionModal from './DescriptionModal'; // <-- Import the new modal
 import Image from 'next/image';
 
 interface FeaturedBooksProps {
@@ -12,17 +13,34 @@ interface FeaturedBooksProps {
 
 export default function FeaturedBooks({ ebooks }: FeaturedBooksProps) {
   const [selectedEbook, setSelectedEbook] = useState<Ebook | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false); // Renamed for clarity
+  const [isDescriptionModalOpen, setIsDescriptionModalOpen] = useState(false); // New state
 
+  // Function to open the Quick Buy (Payment) Modal
   const handleQuickBuy = (ebook: Ebook) => {
     setSelectedEbook(ebook);
-    setIsModalOpen(true);
+    setIsPaymentModalOpen(true);
   };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
+  // Function to open the Detailed Description Modal
+  const handleViewDetails = (ebook: Ebook) => {
+    setSelectedEbook(ebook);
+    setIsDescriptionModalOpen(true);
+  };
+
+  // Function to close both modals and reset selected Ebook
+  const handleCloseModals = () => {
+    setIsPaymentModalOpen(false);
+    setIsDescriptionModalOpen(false);
     setSelectedEbook(null);
   };
+    
+  // Function to handle the transition from Description Modal to Payment Modal
+  const handleProceedToBuy = (ebook: Ebook) => {
+      // The description modal is closed inside DescriptionModal.tsx
+      setSelectedEbook(ebook);
+      setIsPaymentModalOpen(true); // Open the Payment Modal
+  }
 
   return (
     <>
@@ -66,7 +84,7 @@ export default function FeaturedBooks({ ebooks }: FeaturedBooksProps) {
                     sizes="(max-width: 768px) 100vw, 300px"
                   />
                   
-                  {/* Quick Action Overlay */}
+                  {/* Quick Action Overlay: This button still opens the Quick Buy/Payment Modal */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-40 transition duration-300">
                     <button
                       onClick={() => handleQuickBuy(ebook)}
@@ -102,11 +120,12 @@ export default function FeaturedBooks({ ebooks }: FeaturedBooksProps) {
                   </div>
 
                   <div className="flex gap-2">
+                    {/* CHANGE: This button now opens the Description Modal */}
                     <button
-                      onClick={() => handleQuickBuy(ebook)}
+                      onClick={() => handleViewDetails(ebook)} 
                       className="flex-1 bg-blue-600 text-white py-2 px-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition duration-200"
                     >
-                      Download
+                      View Details
                     </button>
                     
                   </div>
@@ -145,10 +164,21 @@ export default function FeaturedBooks({ ebooks }: FeaturedBooksProps) {
         </div>
       </section>
 
+      {/* 3. Modals Integrated */}
+      
+      {/* 1. Payment Modal (Quick Buy) */}
       <PaymentModal
         ebook={selectedEbook}
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
+        isOpen={isPaymentModalOpen}
+        onClose={handleCloseModals}
+      />
+      
+      {/* 2. Description Modal (View Details) */}
+      <DescriptionModal
+        ebook={selectedEbook}
+        isOpen={isDescriptionModalOpen}
+        onClose={handleCloseModals}
+        onProceedToBuy={handleProceedToBuy} // Allows transition to the Payment Modal
       />
     </>
   );
