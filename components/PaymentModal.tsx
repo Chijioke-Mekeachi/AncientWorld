@@ -206,7 +206,7 @@ export default function PaymentModal({ ebook, isOpen, onClose }: PaymentModalPro
                 Processing...
               </div>
             ) : (
-              `Pay $${ebook.price} with Paystack`
+              `Pay NGN ${ebook.price} with Paystack`
             )}
           </button>
 

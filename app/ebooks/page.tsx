@@ -1,11 +1,12 @@
+// app/ebooks/page.tsx
 'use client'
-import { ebooks } from '@/data/ebooks';
+import { ebooks } from '@/data/ebooks'; // Assumed data source
 import EbookCard from '@/components/EbookCard';
-import DescriptionModal from '@/components/DescriptionModal'; // <-- NEW
-import PaymentModal from '@/components/PaymentModal';       // <-- NEW
+import DescriptionModal from '@/components/DescriptionModal'; 
+import PaymentModal from '@/components/PaymentModal';       // Assumed component
 import React from 'react';
 
-// Re-defining Ebook interface for completeness, though typically it's imported from @/types
+// Re-defining Ebook interface for completeness
 export interface Ebook {
   id: number;
   title: string;
@@ -16,8 +17,8 @@ export interface Ebook {
   pages: number;
   format: string;
   downloadUrl?: string;
-  author?: string; // Added for modal display
-  rating?: number; // Added for modal display
+  author?: string; 
+  rating?: number; 
 }
 
 export default function EbooksPage() {
@@ -30,12 +31,11 @@ export default function EbooksPage() {
 
   React.useEffect(() => {
     document.title = 'Ebooks - Digital Library';
-    // console.log(search); // Removed console.log from useEffect dependency array
   }, []);
   
   // --- HANDLER FUNCTIONS ---
   
-  // 1. Opens the detailed Description Modal
+  // 1. Opens the detailed Description Modal (called from EbookCard)
   const handleViewDetails = (ebook: Ebook) => {
     setSelectedEbook(ebook);
     setIsDescriptionModalOpen(true);
@@ -43,7 +43,7 @@ export default function EbooksPage() {
   
   // 2. Handles the transition from Description Modal to Payment Modal
   const handleProceedToBuy = (ebook: Ebook) => {
-    // Description Modal is expected to close itself before this function is called
+    setIsDescriptionModalOpen(false); // Close description modal
     setSelectedEbook(ebook);
     setIsPaymentModalOpen(true); // Open the Payment Modal
   };
@@ -60,12 +60,10 @@ export default function EbooksPage() {
   const filteredEbooks = ebooks.filter((ebook: Ebook) => {
     const searchTerm = search.toLowerCase();
     
-    // If search is empty, return all ebooks
     if (searchTerm === "") {
       return true;
     }
     
-    // Check if search term is included in title or description
     return (
       ebook.title.toLowerCase().includes(searchTerm) ||
       ebook.description.toLowerCase().includes(searchTerm)
@@ -93,22 +91,20 @@ export default function EbooksPage() {
         {/* Ebook Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredEbooks.map((ebook: Ebook) => (
-            // Pass the handler to the EbookCard
             <EbookCard 
               key={ebook.id} 
               ebook={ebook} 
-              onViewDetails={handleViewDetails} // <-- Using the handler here
+              onViewDetails={handleViewDetails} 
             />
           ))}
           {filteredEbooks.length === 0 && (
-              <p className="text-center text-xl text-gray-600 col-span-full">No ebooks found matching "{search}"</p>
+              <p className="text-center text-xl text-gray-600 col-span-full">No ebooks found matching {search}</p>
           )}
         </div>
       </div>
       
       {/* --- MODALS --- */}
 
-      {/* 1. Description Modal */}
       <DescriptionModal
         ebook={selectedEbook}
         isOpen={isDescriptionModalOpen}
@@ -116,7 +112,6 @@ export default function EbooksPage() {
         onProceedToBuy={handleProceedToBuy}
       />
 
-      {/* 2. Payment Modal */}
       <PaymentModal
         ebook={selectedEbook}
         isOpen={isPaymentModalOpen}

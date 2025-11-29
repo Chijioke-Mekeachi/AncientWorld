@@ -4,9 +4,10 @@ import EbookCard from './EbookCard';
 
 interface FeaturedBooksProps {
   ebooks: Ebook[];
+  onViewDetails: (ebook: Ebook) => void; // ✅ Add the handler prop
 }
 
-export default function FeaturedBooksSimple({ ebooks }: FeaturedBooksProps) {
+export default function FeaturedBooksSimple({ ebooks, onViewDetails }: FeaturedBooksProps) {
   return (
     <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,7 +27,8 @@ export default function FeaturedBooksSimple({ ebooks }: FeaturedBooksProps) {
                   Popular
                 </div>
               )}
-              <EbookCard ebook={ebook} />
+              {/* Pass the required handler */}
+              <EbookCard ebook={ebook} onViewDetails={onViewDetails} />
             </div>
           ))}
         </div>

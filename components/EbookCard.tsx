@@ -1,11 +1,10 @@
 // components/EbookCard.tsx
-import Link from "next/link";
-import { Ebook } from "@/types";
+import { Ebook } from "@/types"; // Assumed import
 import Image from "next/image";
 
 interface EbookCardProps {
   ebook: Ebook;
-  // NEW PROP: Function to call when the 'Buy Now' button is clicked
+  // Handler passed from the parent to open the modal
   onViewDetails: (ebook: Ebook) => void; 
 }
 
@@ -15,10 +14,11 @@ export default function EbookCard({ ebook, onViewDetails }: EbookCardProps) {
       <div className="relative w-full h-48 bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center">
         {ebook.image ? (
           <Image
-            alt="book photo"
+            alt={`Cover for ${ebook.title}`}
             src={ebook.image}
             fill
             className="object-contain p-4"
+            sizes="(max-width: 768px) 100vw, 300px"
           />
         ) : (
           <span className="text-white text-center text-[20px]">
@@ -42,18 +42,17 @@ export default function EbookCard({ ebook, onViewDetails }: EbookCardProps) {
         </p>
 
         <div className="flex justify-between items-center text-sm text-gray-500 mb-4">
-          <span>📖 {ebook.pages} chapters</span> {/* Changed pages to chapters for consistency */}
+          <span>📖 {ebook.pages} chapters</span>
           <span>📄 {ebook.format}</span>
         </div>
 
-        {/* --- CHANGE MADE HERE --- */}
+        {/* Action Button: Triggers the modal via the handler */}
         <button
-          onClick={() => onViewDetails(ebook)} // Call the function passed from the parent
+          onClick={() => onViewDetails(ebook)} 
           className="w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition block"
         >
           View Details
         </button>
-        {/* ------------------------ */}
       </div>
     </div>
   );
