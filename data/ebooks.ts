@@ -10,7 +10,7 @@ export const ebooks: Ebook[] = [
     image: "/3 COVER PAGE 70 YEARS.png",
     category: "Military History",
     pages:31,
-    format: "PDF",
+    format: "EPUB",
     downloadUrl: "https://drive.google.com/uc?export=download&id=1bwfACcOghl9YDCpB8u3y0H1a7U38k9KO"
   },
   {
@@ -21,7 +21,7 @@ export const ebooks: Ebook[] = [
     image: "/2  COVER PAGE JD.jpg",
     category: "Religion",
     pages: 18,
-    format: "PDF",
+    format: "EPUB",
     downloadUrl: "https://drive.google.com/uc?export=download&id=1rQ9-6DZisYb-St3o1me8j4crgnrXsFsx"
   },
   {
@@ -32,7 +32,7 @@ export const ebooks: Ebook[] = [
     image: "/1  COVER PAGE RS.png",
     category: "Fiction",
     pages: 23,
-    format: "PDF",
+    format: "EPUB",
     downloadUrl: "https://drive.google.com/uc?export=download&id=1O_NoELnGVr6cq66ZjdTXCP4xWkVm3dJy"
   },
   // {
