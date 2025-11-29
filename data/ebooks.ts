@@ -6,7 +6,7 @@ export const ebooks: Ebook[] = [
     id: 1,
     title: "70 Years Military Crushing",
     description: "A comprehensive analysis of military strategies and historical perspectives spanning seven decades of conflict and resolution.",
-    price: 110.00,
+    price: 2000.00,
     image: "/3 COVER PAGE 70 YEARS.png",
     category: "Military History",
     pages:31,
