@@ -84,7 +84,7 @@ export default function FeaturedBooks({ ebooks }: FeaturedBooksProps) {
                       {ebook.title}
                     </h3>
                     <span className="bg-blue-100 text-blue-800 text-sm font-semibold px-2 py-1 rounded flex-shrink-0">
-                      Free
+                      NGN {ebook.price.toLocaleString('en-US', {})}
                     </span>
                   </div>
 

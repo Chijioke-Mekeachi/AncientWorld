@@ -119,7 +119,7 @@ export default function PaymentModal({ ebook, isOpen, onClose }: PaymentModalPro
               <p className="text-gray-600 text-sm">{ebook.category}</p>
               <div className="flex items-center justify-between mt-2">
                 <span className="text-sm text-gray-500">{ebook.pages} pages • {ebook.format}</span>
-                <span className="text-2xl font-bold text-blue-600">NGN {ebook.price}</span>
+                <span className="text-2xl font-bold text-blue-600">NGN {ebook.price.toLocaleString('en-US', {})}</span>
               </div>
             </div>
           </div>
