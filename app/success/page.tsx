@@ -123,16 +123,10 @@ function SuccessContent() {
               ? 'Preparing...'
               : downloadCount > 0
               ? isDrive
-                ? 'Open in Google Drive'
+                ? 'Download Ebook'
                 : 'Download Ebook'
               : 'No Downloads Remaining'}
           </button>
-
-          {isDrive && (
-            <p className="text-sm text-blue-600 mb-4">
-              📎 This ebook is hosted on Google Drive and will open in a new tab
-            </p>
-          )}
 
           <p className="text-sm text-gray-500 mb-6">
             The download link will also be sent to your email for future access.
