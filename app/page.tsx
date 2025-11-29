@@ -1,4 +1,6 @@
 // app/page.tsx
+'use client';
+
 import Link from 'next/link';
 import { ebooks } from '@/data/ebooks';
 import EbookCard from '@/components/EbookCard';

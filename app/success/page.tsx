@@ -1,45 +1,41 @@
-// app/success/page.tsx - Update the download function
+// app/success/page.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { ebooks } from '@/data/ebooks';
 import { Ebook } from '@/types';
 
 export default function SuccessPage() {
   const searchParams = useSearchParams();
-  const router = useRouter();
   const ebookId = searchParams.get('ebook');
   const [ebook, setEbook] = useState<Ebook | null>(null);
   const [downloadCount, setDownloadCount] = useState(3);
 
   useEffect(() => {
-  if (!ebookId) return;
+    if (!ebookId) return;
 
-  const found = ebooks.find(e => e.id === Number(ebookId)) ?? null;
-
-  // Avoid synchronous state updates inside the effect
-  Promise.resolve().then(() => setEbook(found));
-}, [ebookId]);
-
-
+    const found = ebooks.find(e => e.id === Number(ebookId)) ?? null;
+    setEbook(found);
+    setDownloadCount(3); // Reset downloads for a new ebook
+  }, [ebookId]);
 
   const handleDownload = () => {
-    if (ebook?.downloadUrl) {
-      if (ebook.downloadUrl.includes('drive.google.com')) {
-        window.open(ebook.downloadUrl, '_blank');
-      } else {
-        const link = document.createElement('a');
-        link.href = ebook.downloadUrl;
-        link.download = `${ebook.title.replace(/\s+/g, '-').toLowerCase()}.pdf`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      }
-      
-      setDownloadCount(prev => Math.max(0, prev - 1));
+    if (!ebook || downloadCount === 0) return;
+
+    if (ebook.downloadUrl.includes('drive.google.com')) {
+      window.open(ebook.downloadUrl, '_blank');
+    } else {
+      const link = document.createElement('a');
+      link.href = ebook.downloadUrl;
+      link.download = `${ebook.title.replace(/\s+/g, '-').toLowerCase()}.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
+
+    setDownloadCount(prev => Math.max(0, prev - 1));
   };
 
   if (!ebook) {
@@ -63,7 +59,7 @@ export default function SuccessPage() {
           <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <span className="text-3xl">✅</span>
           </div>
-          
+
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Payment Successful!</h1>
           <p className="text-lg text-gray-600 mb-6">
             Thank you for your purchase. Your ebook is ready to download.
@@ -80,11 +76,11 @@ export default function SuccessPage() {
             disabled={downloadCount === 0}
             className="w-full bg-green-600 text-white py-4 rounded-lg font-semibold hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition duration-300 mb-4"
           >
-            {downloadCount > 0 ? 
-              (ebook.downloadUrl?.includes('drive.google.com') ? 
-                'Download Now' : 'Download Ebook') 
-              : 'No Downloads Remaining'
-            }
+            {downloadCount > 0
+              ? ebook.downloadUrl?.includes('drive.google.com')
+                ? 'Download Now'
+                : 'Download Ebook'
+              : 'No Downloads Remaining'}
           </button>
 
           {ebook.downloadUrl?.includes('drive.google.com') && (
@@ -98,7 +94,10 @@ export default function SuccessPage() {
           </p>
 
           <div className="flex gap-4">
-            <Link href="/ebooks" className="flex-1 btn-secondary text-center border-2 border-black justify-center text-black py-3 rounded-lg font-semibold hover:bg-gray-200 transition duration-300">
+            <Link
+              href="/ebooks"
+              className="flex-1 btn-secondary text-center border-2 border-black justify-center text-black py-3 rounded-lg font-semibold hover:bg-gray-200 transition duration-300"
+            >
               Browse More
             </Link>
             <button
