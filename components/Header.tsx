@@ -1,4 +1,5 @@
 // components/Header.tsx
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Header() {
@@ -7,7 +8,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-yellow-500 via-brown-500 to-red-400 bg-clip-text text-transparent">
+            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-yellow-500 via-brown-500 to-red-400 bg-clip-text text-transparent flex justify-center items-center gap-2">
+            <Image src={`/favorite.png`} width={100} height={100}/>
              Windows to The Ancient-World
             </Link>
           </div>

@@ -8,7 +8,7 @@ import { Toaster } from 'react-hot-toast';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'EbookStore - Premium Digital Books',
+  title: 'Windows To The Ancient World',
   description: 'Discover amazing ebooks that transform your knowledge',
 };
 
