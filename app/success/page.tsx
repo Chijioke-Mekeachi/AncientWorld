@@ -15,11 +15,15 @@ export default function SuccessPage() {
   const [downloadCount, setDownloadCount] = useState(3);
 
   useEffect(() => {
-    if (ebookId) {
-      const foundEbook = ebooks.find(e => e.id === parseInt(ebookId));
-      setEbook(foundEbook);
-    }
-  }, [ebookId]);
+  if (!ebookId) return;
+
+  const found = ebooks.find(e => e.id === Number(ebookId)) ?? null;
+
+  // Avoid synchronous state updates inside the effect
+  Promise.resolve().then(() => setEbook(found));
+}, [ebookId]);
+
+
 
   const handleDownload = () => {
     if (ebook?.downloadUrl) {
