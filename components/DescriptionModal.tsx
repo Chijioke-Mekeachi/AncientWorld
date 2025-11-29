@@ -52,13 +52,13 @@ export default function DescriptionModal({ ebook, isOpen, onClose, onProceedToBu
             <div className="flex flex-col lg:flex-row gap-8">
               
                 {/* Left Column: Cover and Buy */}
-                <div className="lg:w-1/3 flex flex-col items-center">
-                    <div className="relative w-full max-w-xs h-90 rounded-xl shadow-xl overflow-hidden mb-6 border border-gray-100">
+                <div className="lg:w-1/3 flex flex-col items-center ">
+                    <div className="relative w-48 h-64 mb-6 shadow-lg rounded-lg overflow-hidden bg-gray-100">
                         <Image
                             src={ebook.image}
                             alt={ebook.title}
                             fill
-                            className="object-cover"
+                            className=""
                             // sizes="400px"
                             priority
                         />

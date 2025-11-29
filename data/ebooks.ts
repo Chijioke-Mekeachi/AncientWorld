@@ -40,7 +40,7 @@ This book is that story.`,
   {
     id: 2,
     title: "A Better Understanding of Judaism",
-    description: "Explore the rich traditions, beliefs, and history of Judaism in this comprehensive guide to one of the world's oldest religions.",
+    description: "",
     price: 2000.00,
     image: "/2  COVER PAGE JD.jpg",
     category: "Religion",
