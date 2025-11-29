@@ -20,7 +20,7 @@ export default function Home() {
             Discover <span className="bg-gradient-to-r from-orange-500 via-brown-500 to-yellow-500 bg-clip-text text-transparent">Ancient Wisdom</span> for Modern Times
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Journey Through time with meticulously researched articules and books that bring ancient civilization to life. Explor philosophies, Histories, and traditions that shaped our world.
+            Journey Through time with meticulously researched articles and books that bring ancient civilization to life. Explor philosophies, Histories, and traditions that shaped our world.
           </p>
           <Link 
             href="/ebooks"
