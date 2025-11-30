@@ -74,7 +74,7 @@ export default function DescriptionModal({ ebook, isOpen, onClose, onProceedToBu
             <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 leading-tight">
               {ebook.title}
             </h1>
-            <p className="text-lg text-blue-600 font-semibold mb-6 border-b pb-4">By: {'Dr. Ishiusah Chijioke'}</p>
+            <p className="text-lg text-blue-600 font-semibold mb-6 border-b pb-4">By: {ebook.author}</p>
 
             <h2 className="text-2xl font-bold text-gray-800 mb-3">Ebook Overview</h2>
             <p className="text-gray-600 text-base leading-relaxed mb-6">{ebook.description}</p>
