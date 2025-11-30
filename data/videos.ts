@@ -26,14 +26,6 @@ export const videos: Video[] = [
     youtubeUrl:"https://www.youtube.com/watch?v=HLQ97erL1gc",
     duration: '1:15:30',
     category: 'Documentary',
-  },
-  {
-    id: 3,
-    title: "Were the Ebionites Heretics? Or  Our Best Witness to the Jesus Movement?",
-    description: `The ancient group of Jesus followers referred to as the "Ebionites" were slandered, damned, and declared heretics by the mainstream Christian Orthodox Church Fathers. In this interview with Derek Lambert, host of @MythVisionPodcast , I argue that they might well be one of our main clues to recovering what the original followers of John the Baptist, Jesus, and his brother James were all about. I explore the various uses of the term "Ebionite" and try to problematize any quick and easy categorization of the diverse nature of the Jesus Movement in late 2nd Temple times. The use of dichotomous categories like "Jewish Christian" or "Judaeo-Christian," or even Nazarene and Ebonite--as they come to be used in later times by the Church Fathers--and even in modern descriptions, are all misleading. Here I offer a counter approach, and with a very few others, connect the Ebionites to the mother Jerusalem Church of James the Just and his followers--with Paul's relationship to the earliest moment left ambiguous due to his imminent apocalyptic expectations.`,
-    youtubeUrl: 'https://www.youtube.com/watch?v=HLQ97erL1gc',
-    duration: '52:45',
-    category: 'Greece',
   },{
     id: 4,
     title: "The Biblical Errors That Collapse the Jesus Story",
