@@ -66,6 +66,70 @@ export const pictures: Picture[] = [
     year:"500 BC",
     location:"Greece",
     externalUrl:"https://study.com/learn/lesson/ancient-greek-art-architecture-style-examples.html"
+  },{
+    id:7,
+    title:'Roman pottery',
+    description:"Roman pottery was a significant aspect of daily life in ancient Rome, serving both practical and decorative purposes. It included a variety of forms such as amphorae for storage, terra sigillata for fine dining, and utilitarian wares for everyday use. Roman pottery was often decorated with intricate designs, scenes from mythology, and everyday life, reflecting the culture and values of Roman society. The production techniques and styles evolved over time, influenced by interactions with other cultures within the vast Roman Empire.",
+    image:"/photo6.png",
+    year:"100 AD",
+    location:"Rome",
+    externalUrl:"https://share.google/images/kuo4ACw9kYgb1hbRM"
+  },{
+    id:8,
+    title:'Roman pottery',
+    description:"Ancient Roman architecture",
+    image:"/photo7.png",
+    year:"200 AD",
+    location:"Rome",
+    externalUrl:"https://share.google/images/BOzf3S6p64RPuTvls"
+  },{
+    id:9,
+    title:'Ancient israeli pottery',
+    description:"Ancient Israeli pottery",
+    image:"/photo8.png",
+    year:"300 AD",
+    location:'isreal',
+    externalUrl:"https://share.google/images/hWPHi6hVKEp7M9JYr"
+  },{
+    id:10,
+    title:'Iron Age Jug 1200-925 B.C. – Discovered in the Holy Land',
+    description:"Iron Age Jug 1200-925 B.C. – Discovered in the Holy Land",
+    image:"/photo9.png",
+    year:"925 BC",
+    location:'isreal',
+    externalUrl:"https://share.google/images/1gk3bX1pXJH6b2Fv5"
+  },{
+    id:11,
+    title:'Jesus Time Cooking Pot',
+    description:"Jesus Time Cooking Pot",
+    image:"/photo10.png",
+    year:"30 AD",
+    location:'isreal',
+    externalUrl:"https://zaksantiquities.com/shop/ancient-pottery/ancient-cooking-pots/jesus-time-cooking-pot/?srsltid=AfmBOoruqG-Qgxgy90QVenjIgDqfH3evwGeidmrUzUaSHJpXH1R1YjCx"
+  },{
+    id:12,
+    title:'Ancient Israel oil lamp',
+    description:"",
+    image:"/photo11.png",
+    year:"100 AD",
+    location:'isreal',
+    externalUrl:"https://www.istockphoto.com/photo/oil-lamp-gm136561886-1936278",
+  },{
+    id:13,
+    title:'Old vases in Israel',
+    description:'',
+    image:"/photo12.png",
+    year:"200 AD",
+    location:'isreal',
+    externalUrl:"https://www.istockphoto.com/photo/old-vases-in-israel-gm455662059-30691320",
+  },{
+    id:14,
+    title:'Life in Ancient Israel',
+    description:'',
+    image:"/photo13.png",
+    year:"300 AD",
+    location:'isreal',
+    externalUrl:"https://www.immanuel-tours.com/blog/life-in-ancient-israel/"
   }
   // Add more pictures similarly...
 ];
