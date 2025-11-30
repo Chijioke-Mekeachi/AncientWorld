@@ -40,7 +40,7 @@ export default function Home() {
         </div>
 
         {/* Middle Content */}
-        <div className="max-w-2xl mx-auto text-center md:text-left flex flex-col gap-6">
+        <div className="max-w-2xl mx-auto text-center md:text-center flex flex-col gap-6">
           <div>
             <h1 className="text-3xl md:text-5xl font-bold mb-4">
               Discover <span className="bg-gradient-to-r from-orange-800 via-brown-800 to-yellow-800 bg-clip-text text-transparent">Ancient Wisdom</span> for Modern Times
@@ -52,7 +52,7 @@ export default function Home() {
 
           {/* Pictorials */}
           <div className="flex flex-col items-center md:items-start gap-6 justify-center">
-            <p className="text-xl md:text-2xl font-bold border-b-2 px-6">
+            <p className="text-xl md:text-2xl font-bold border-b-2 px-6 w-full text0center">
               Features Pictorials
             </p>
             <Link href='/pictures'>
@@ -71,7 +71,7 @@ export default function Home() {
           <Link href="/videos">
             <Image 
               src="/VideoImage.png" 
-              width={200} height={200} 
+              width={300} height={400} 
               alt="book"
               className="w-32 md:w-48 rotate-[10deg] floating"
             />
