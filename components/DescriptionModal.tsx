@@ -54,7 +54,7 @@ export default function DescriptionModal({ ebook, isOpen, onClose, onProceedToBu
             <div className="w-full max-w-xs p-4 bg-gray-50 rounded-lg">
               <div className="flex items-end justify-between mb-3">
                 {ebook.price <= 0 ? (
-                  <span className="text-green-600 text-2xl font-bold">Free</span>
+                  <span className="text-green-600 text-2xl font-bold"></span>
                 ) : (
                   <span className="text-green-600 text-2xl font-bold">NGN {ebook.price.toLocaleString('en-US')}</span>
                 )}
