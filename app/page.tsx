@@ -52,14 +52,16 @@ export default function Home() {
 
           {/* Pictorials */}
           <div className="flex flex-col items-center md:items-start gap-6 justify-center">
-            <p className="text-xl md:text-2xl font-bold border-b-2 rounded-full px-6">
+            <p className="text-xl md:text-2xl font-bold border-b-2 px-6">
               Features Pictorials
             </p>
+            <Link href='/pictures'>
             <div className="flex flex-wrap justify-center gap-4">
               <Image src="/Giove,_I_sec_dc,_con_parti_simulanti_il_bronzo_moderne_02.JPG" alt="pictorial" width={200} height={200} className="w-24 md:w-40 rotate-[-20deg]" />
               <Image src="/Jupiter-Religion1.jpg" alt="pictorial" width={200} height={200} className="w-24 md:w-40 rounded-lg" />
               <Image src="/face-of-roman-god-jupiter.png" alt="pictorial" width={200} height={200} className="w-24 md:w-40 rotate-[20deg]" />
             </div>
+            </Link>
           </div>
         </div>
 
