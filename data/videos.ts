@@ -87,6 +87,20 @@ Tovia Singer`,
     youtubeUrl: 'https://www.youtube.com/watch?v=JIY-tLVJctY',
     duration: '50:30',
     category: 'Documentary',
+  },{
+    id: 11,
+    title: "The 3,000 Bibles Constantine Tried to Erase Forever",
+    description: `In 325 AD, Emperor Constantine faced a crisis: Christianity was tearing his empire apart. Different communities had different Gospels, different versions of Jesus, different truths. His solution? Gather 318 bishops at the Council of Nicaea and force them to agree on one version of Christianity—one creed, one canon, one Bible. But what books were left out? Which Gospels were banned? And who really decided what you read in your Bible today? This is the untold story of how Constantine shaped Christianity forever.`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=knTxJ3ISVHs',
+    duration: '25:45',
+    category: 'Documentary',
+  },{
+    id: 12,
+    title: "Early Christian Persecution",
+    description: `This video looks at the earliest Christian persecution under the Roman Empire.`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=hJR0A9phBc8',
+    duration: '50:30',
+    category: 'Rome',
   }
 ];
 // https://youtu.be/Qw3CjmoB3oY
