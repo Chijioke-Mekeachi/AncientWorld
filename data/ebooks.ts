@@ -116,7 +116,7 @@ Told with warmth, humour, and unflinching realism, RAINBOW SLUM: A PORT HARCOURT
     category:"History",
     pages:10,
     format:"Website",
-    downloadUrl:"https://www.barnesandnoble.com/w/the-new-roman-empire-anthony-kaldellis/1142870036?ean=9780197575764",
+    downloadUrl:"https://www.barnesandnoble.com/w/the-new-roman-empire-anthony-kaldellis/1142181136?ean=9780197549346",
   },{
     id:6,
     title:"The Fall or The Roman Empire",
