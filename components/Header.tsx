@@ -22,7 +22,7 @@ export default function Header() {
             className="text-3xl font-extrabold bg-gradient-to-r from-yellow-500 via-amber-600 to-red-500 bg-clip-text text-transparent flex items-center gap-3"
           >
             <Image alt="Logo" src="/favorite.png" width={60} height={60} />
-            Ancient World
+            Windows to The Ancient World
           </Link>
 
           {/* Desktop Navigation */}
