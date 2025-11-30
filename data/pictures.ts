@@ -13,16 +13,16 @@ export const pictures: Picture[] = [
     id: 1,
     title: "Ruins of Babylon",
     description: "Ancient Mesopotamian ruins preserved through centuries.",
-    image: "/images/babylon.jpg",
+    image: "/face-of-roman-god-jupiter.png",
     year: "1800 BC",
-    location: "Iraq",
+    location: "Rome",
     externalUrl: "https://en.wikipedia.org/wiki/Babylon"
   },
   {
     id: 2,
     title: "Egyptian Wall Carvings",
     description: "Carvings illustrating life along the Nile.",
-    image: "/images/egypt-carvings.jpg",
+    image: "/Giove,_I_sec_dc,_con_parti_simulanti_il_bronzo_moderne_02.JPG",
     year: "1450 BC",
     location: "Egypt",
     externalUrl: "https://en.wikipedia.org/wiki/Ancient_Egyptian_art"
