@@ -27,11 +27,11 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-10 text-lg font-medium">
-            <Link href="/" className="nav-link">Home</Link>
-            <Link href="/" className="nav-link">About</Link>
-            <Link href="/videos" className="nav-link">Videos</Link>
-            <Link href="/" className="nav-link">Articles</Link>
-            <Link href="/" className="nav-link">Pictorials</Link>
+            <Link href="/" className="nav-link text-black  hover:text-orange-600">Home</Link>
+            <Link href="/" className="nav-link text-black  hover:text-orange-600">About</Link>
+            <Link href="/videos" className="nav-link text-black  hover:text-orange-600">Videos</Link>
+            <Link href="/articles" className="nav-link text-black  hover:text-orange-600">Articles</Link>
+            <Link href="/pictures" className="nav-link text-black hover:text-orange-600">Pictorials</Link>
 
             <Link 
               href="/ebooks"
@@ -58,11 +58,11 @@ export default function Header() {
         >
           <div className="flex flex-col space-y-4 text-lg font-medium">
 
-            <Link href="/" className="mobile-link">Home</Link>
-            <Link href="/" className="mobile-link">About</Link>
-            <Link href="/videos" className="mobile-link">Videos</Link>
-            <Link href="/" className="mobile-link">Articles</Link>
-            <Link href="/" className="mobile-link">Pictorials</Link>
+            <Link href="/" className="mobile-link text-black  hover:text-orange-600">Home</Link>
+            <Link href="/" className="mobile-link text-black  hover:text-orange-600">About</Link>
+            <Link href="/videos" className="mobile-link text-black  hover:text-orange-600">Videos</Link>
+            <Link href="/articles" className="mobile-link text-black  hover:text-orange-600">Articles</Link>
+            <Link href="/pictures" className="mobile-link text-black  hover:text-orange-600">Pictorials</Link>
 
             <Link 
               href="/ebooks"

@@ -51,7 +51,7 @@ export default function Home() {
           </div>
 
           {/* Pictorials */}
-          <div className="flex flex-col items-center md:items-start gap-6">
+          <div className="flex flex-col items-center md:items-start gap-6 justify-center">
             <p className="text-xl md:text-2xl font-bold border-b-2 rounded-full px-6">
               Features Pictorials
             </p>
