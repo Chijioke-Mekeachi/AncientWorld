@@ -60,12 +60,20 @@ export default function DescriptionModal({ ebook, isOpen, onClose, onProceedToBu
                 )}
               </div>
               
-              <button
+              {ebook.price == 0 ? (
+                <button
                 onClick={handleBuyClick}
                 className="w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-bold hover:bg-blue-700 transition duration-200"
               >
-                Proceed to Checkout
+                View More Details
               </button>
+              ):(
+                <button
+                onClick={handleBuyClick}
+                className="w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-bold hover:bg-blue-700 transition duration-200"
+              >
+                Proceed to Payments
+              </button>)}
             </div>
           </div>
 
