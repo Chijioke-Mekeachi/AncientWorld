@@ -10,22 +10,13 @@ export interface Picture {
 
 export const pictures: Picture[] = [
   {
-    id: 1,
-    title: "Ruins of Babylon",
-    description: "Ancient Mesopotamian ruins preserved through centuries.",
-    image: "/face-of-roman-god-jupiter.png",
-    year: "1800 BC",
-    location: "Rome",
-    externalUrl: "https://en.wikipedia.org/wiki/Babylon"
-  },
-  {
     id: 2,
-    title: "Egyptian Wall Carvings",
-    description: "Carvings illustrating life along the Nile.",
+    title: "Jupiter, the Roman King of the Gods",
+    description:`In terms of Roman mythology, the god Jupiter is the king. In fact, he is often referred to as the king of the gods. He may not be the original creator of the mythological creatures that dominated tales and lore; that distinction belongs to his father Saturn. But Jupiter is the main man, a la Zeus in Greek mythology.`,
     image: "/Giove,_I_sec_dc,_con_parti_simulanti_il_bronzo_moderne_02.JPG",
     year: "1450 BC",
     location: "Egypt",
-    externalUrl: "https://en.wikipedia.org/wiki/Ancient_Egyptian_art"
+    externalUrl: "https://greekgodsandgoddesses.net/gods/jupiter/"
   },{
     id: 3,
     title: "Roman Army Weapons",
@@ -130,6 +121,14 @@ export const pictures: Picture[] = [
     year:"300 AD",
     location:'isreal',
     externalUrl:"https://www.immanuel-tours.com/blog/life-in-ancient-israel/"
+  },{
+    id:15,
+    title:'Zeus',
+    description:`In Greek mythology, Zeus is the king of the gods and ruler of Mount Olympus. He is the god of the sky, lightning, thunder, law, order, and justice. Zeus is known for his powerful presence and is often depicted wielding a thunderbolt. As the chief deity in the Greek pantheon, he played a central role in many myths and legends, governing both gods and humans alike.`,
+    image: "/photo14.png",
+    year: "1000 BC",
+    location: "Greece",
+    externalUrl: "https://www.historydefined.net/who-were-the-gods-and-goddesses-of-ancient-greece/"
   }
   // Add more pictures similarly...
 ];
