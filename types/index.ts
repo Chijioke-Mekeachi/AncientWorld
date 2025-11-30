@@ -9,6 +9,7 @@ export interface Ebook {
   pages: number;
   format: string;
   downloadUrl?: string;
+  author?: string;
 }
 
 export interface PaymentResponse {

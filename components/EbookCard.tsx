@@ -31,9 +31,11 @@ export default function EbookCard({ ebook, onViewDetails }: EbookCardProps) {
           <h3 className="text-xl font-bold text-gray-900 line-clamp-2">
             {ebook.title}
           </h3>
-          <span className="bg-blue-100 text-blue-800 text-sm font-semibold px-2 py-1 rounded ml-2">
+          {ebook.price === 0 ? (<span className="bg-blue-100 text-blue-800 text-sm font-semibold px-2 py-1 rounded ml-2">
+            
+          </span>) : (<span className="bg-green-100 text-green-800 text-sm font-semibold px-2 py-1 rounded ml-2">
             NGN {ebook.price.toLocaleString('en-US', {})}
-          </span>
+          </span>)}
         </div>
 
         <p className="text-gray-600 mb-4 text-sm line-clamp-3">
