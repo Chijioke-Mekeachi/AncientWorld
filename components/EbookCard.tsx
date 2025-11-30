@@ -17,8 +17,7 @@ export default function EbookCard({ ebook, onViewDetails }: EbookCardProps) {
             alt={`Cover for ${ebook.title}`}
             src={ebook.image}
             fill
-            className="object-contain p-4"
-            sizes="(max-width: 768px) 100vw, 300px"
+            className="w-full h-full "
           />
         ) : (
           <span className="text-white text-center text-[20px]">

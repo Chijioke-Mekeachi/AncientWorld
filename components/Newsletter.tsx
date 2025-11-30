@@ -37,7 +37,7 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+    <section className="py-16 bg-gradient-to-r from-yellow-400 via-brown-500 to-orange-700 text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
         <p className="text-lg mb-8 max-w-2xl mx-auto">

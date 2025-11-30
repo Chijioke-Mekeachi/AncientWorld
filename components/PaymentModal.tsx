@@ -195,7 +195,7 @@ export default function PaymentModal({ ebook, isOpen, onClose }: PaymentModalPro
           <button
             type="submit"
             disabled={isProcessing}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-400 disabled:cursor-not-allowed transition duration-300 mt-6 shadow-lg"
+            className="w-full bg-gradient-to-r from-yellow-400 via-brown-500 to-orange-700 text-white py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-400 disabled:cursor-not-allowed transition duration-300 mt-6 shadow-lg"
           >
             {isProcessing ? (
               <div className="flex items-center justify-center">

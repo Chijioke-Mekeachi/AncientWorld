@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.floating {
+  animation: float 3s 1s infinite forwards ease-in;
+}
+
+@keyframes float {
+  0% { padding-top: 10px; }
+  50% { padding-top: 30px; }
+  100% { padding-top: 10px; }
+}
