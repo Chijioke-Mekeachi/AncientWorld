@@ -58,6 +58,14 @@ export const pictures: Picture[] = [
     year: "100 AD",
     location: "Greece",
     externalUrl: "https://en.wikipedia.org/wiki/Gladiator"
+  },{
+    id:7,
+    title:'Ancient Greek Art & Architecture | Style & Examples',
+    description:"Explore the rich heritage of Ancient Greek art and architecture, from iconic sculptures to majestic temples like the Parthenon. Discover how these masterpieces reflect the culture, religion, and values of ancient Greece, influencing Western art for centuries.",
+    image:"/photo5.png",
+    year:"500 BC",
+    location:"Greece",
+    externalUrl:"https://study.com/learn/lesson/ancient-greek-art-architecture-style-examples.html"
   }
   // Add more pictures similarly...
 ];
