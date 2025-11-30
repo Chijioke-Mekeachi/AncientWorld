@@ -56,9 +56,9 @@ export default function Home() {
               Features Pictorials
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Image src="/1  COVER PAGE RS.png" alt="pictorial" width={200} height={200} className="w-24 md:w-40 rotate-[-20deg]" />
-              <Image src="/1  COVER PAGE RS.png" alt="pictorial" width={200} height={200} className="w-24 md:w-40" />
-              <Image src="/1  COVER PAGE RS.png" alt="pictorial" width={200} height={200} className="w-24 md:w-40 rotate-[20deg]" />
+              <Image src="/Giove,_I_sec_dc,_con_parti_simulanti_il_bronzo_moderne_02.JPG" alt="pictorial" width={200} height={200} className="w-24 md:w-40 rotate-[-20deg]" />
+              <Image src="/Jupiter-Religion1.jpg" alt="pictorial" width={200} height={200} className="w-24 md:w-40 rounded-lg" />
+              <Image src="/face-of-roman-god-jupiter.png" alt="pictorial" width={200} height={200} className="w-24 md:w-40 rotate-[20deg]" />
             </div>
           </div>
         </div>
