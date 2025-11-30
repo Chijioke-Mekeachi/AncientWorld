@@ -70,7 +70,7 @@ export default function Home() {
           <p className="py-3 font-bold text-lg md:text-xl">Our Featured Videos</p>
           <Link href="/videos">
             <Image 
-              src="/VideoImage.png" 
+              src="/image5.png" 
               width={300} height={400} 
               alt="book"
               className="w-32 md:w-48 rotate-[10deg] floating"
