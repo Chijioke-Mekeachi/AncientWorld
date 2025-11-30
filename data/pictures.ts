@@ -50,6 +50,14 @@ export const pictures: Picture[] = [
     year: "500 BC",
     location: "Roman Empire",
     externalUrl: "https://imperiumromanum.pl/en/roman-army/equipment-of-roman-legionary/#google_vignette"
+  },{
+    id: 6,
+    title: "Ancient Greek Sculture",
+    description: " ",
+    image: "/photo4.png",
+    year: "100 AD",
+    location: "Greece",
+    externalUrl: "https://en.wikipedia.org/wiki/Gladiator"
   }
   // Add more pictures similarly...
 ];
