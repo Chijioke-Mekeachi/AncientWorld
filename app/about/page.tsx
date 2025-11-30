@@ -1,3 +1,4 @@
+'use client';
 import Link from "next/link";
 import { useState } from "react";
 import { Facebook, Twitter, Instagram, Linkedin, Menu, X, BookOpen, Award, Globe, Users, Quote } from "lucide-react";
@@ -7,82 +8,6 @@ export default function About() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* NAVBAR */}
-      <header className="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-200">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-amber-800 bg-clip-text text-transparent">
-            Windows to the Ancient World
-          </Link>
-
-          {/* Desktop Menu */}
-          <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="text-slate-700 hover:text-amber-700 font-medium transition-colors duration-200">
-              Home
-            </Link>
-            <Link href="/about" className="text-amber-700 font-medium border-b-2 border-amber-600">
-              About
-            </Link>
-            <Link href="/articles" className="text-slate-700 hover:text-amber-700 font-medium transition-colors duration-200">
-              Articles
-            </Link>
-            <Link href="/books" className="text-slate-700 hover:text-amber-700 font-medium transition-colors duration-200">
-              Books
-            </Link>
-            <Link href="/contact" className="text-slate-700 hover:text-amber-700 font-medium transition-colors duration-200">
-              Contact
-            </Link>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-slate-700 focus:outline-none p-2 hover:bg-slate-100 rounded-lg transition-colors"
-          >
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Dropdown */}
-        {menuOpen && (
-          <nav className="md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 px-6 py-4 space-y-3">
-            <Link
-              href="/"
-              className="block text-slate-700 hover:text-amber-700 font-medium py-2 transition-colors"
-              onClick={() => setMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="block text-amber-700 font-medium py-2 border-l-4 border-amber-600 pl-3"
-              onClick={() => setMenuOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              href="/articles"
-              className="block text-slate-700 hover:text-amber-700 font-medium py-2 transition-colors"
-              onClick={() => setMenuOpen(false)}
-            >
-              Articles
-            </Link>
-            <Link
-              href="/books"
-              className="block text-slate-700 hover:text-amber-700 font-medium py-2 transition-colors"
-              onClick={() => setMenuOpen(false)}
-            >
-              Books
-            </Link>
-            <Link
-              href="/contact"
-              className="block text-slate-700 hover:text-amber-700 font-medium py-2 transition-colors"
-              onClick={() => setMenuOpen(false)}
-            >
-              Contact
-            </Link>
-          </nav>
-        )}
-      </header>
 
       {/* MAIN CONTENT */}
       <main className="flex-grow">

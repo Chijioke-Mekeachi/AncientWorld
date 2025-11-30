@@ -28,7 +28,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-10 text-lg font-medium">
             <Link href="/" className="nav-link text-black  hover:text-orange-600">Home</Link>
-            <Link href="/" className="nav-link text-black  hover:text-orange-600">About</Link>
+            <Link href="/about" className="nav-link text-black  hover:text-orange-600">About</Link>
             <Link href="/videos" className="nav-link text-black  hover:text-orange-600">Videos</Link>
             <Link href="/articles" className="nav-link text-black  hover:text-orange-600">Articles</Link>
             <Link href="/pictures" className="nav-link text-black hover:text-orange-600">Pictorials</Link>
