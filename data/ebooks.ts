@@ -120,7 +120,7 @@ Told with warmth, humour, and unflinching realism, RAINBOW SLUM: A PORT HARCOURT
     author:'Anthony Kaldellis'
   },{
     id:6,
-    title:"The Fall or The Roman Empire",
+    title:"The Fall of The Roman Empire",
     description:`The death of the Roman Empire is one of the perennial mysteries of world history. Now, in this groundbreaking book, Peter Heather proposes a stunning new solution: Centuries of imperialism turned the neighbors Rome called barbarians into an enemy capable of dismantling an Empire that had dominated their lives for so long.A leading authority on the late Roman Empire and on the barbarians, Heather relates the extraordinary story of how Europe's barbarians, transformed by centuries of contact with Rome on every possible level, eventually pulled the empire apart. He shows first how the Huns overturned the existing strategic balance of power on Rome's European frontiers, to force the Goths and others to seek refuge inside the Empire. This prompted two generations of struggle, during which new barbarian coalitions, formed in response to Roman hostility, brought the Roman west to its knees. The Goths first destroyed a Roman army at the battle of Hadrianople in 378, and went on to sack Rome in 410. The Vandals spread devastation in Gaul and Spain, before conquering North Africa, the breadbasket of the Western Empire, in 439. We then meet Attila the Hun, whose reign of terror swept from Constantinople to Paris, but whose death in 453 ironically precipitated a final desperate phase of Roman collapse, culminating in the Vandals' defeat of the massive Byzantine Armada: the west's last chance for survival.`,
     price: 0.0,
     image:"/image3.png",
