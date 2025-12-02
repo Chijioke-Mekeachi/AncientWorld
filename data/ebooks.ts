@@ -117,6 +117,7 @@ Told with warmth, humour, and unflinching realism, RAINBOW SLUM: A PORT HARCOURT
     pages:10,
     format:"Website",
     downloadUrl:"https://www.barnesandnoble.com/w/the-new-roman-empire-anthony-kaldellis/1142181136?ean=9780197549346",
+    author:'Anthony Kaldellis'
   },{
     id:6,
     title:"The Fall or The Roman Empire",
@@ -127,7 +128,7 @@ Told with warmth, humour, and unflinching realism, RAINBOW SLUM: A PORT HARCOURT
     pages:12,
     format:"Website",
     downloadUrl:"https://www.barnesandnoble.com/w/the-fall-of-the-roman-empire-peter-heather/1005789237?ean=9780195325416",  
-    author:`Unknown Writer`
+    author:`Peter Heather `
   },{
     id:7,
   title:"An Illustratrated Guide To Life In Ancient ROME: SOCIETY, RELIGION, CULTURE",

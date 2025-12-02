@@ -67,7 +67,7 @@ export default function DescriptionModal({ ebook, isOpen, onClose, onProceedToBu
                   onClick={handleBuyClick}
                   className="w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-bold hover:bg-blue-700 transition duration-200"
                 >
-                  Get Now (Free)
+                  Get Now
                 </button>
               ) : (
                 <button
