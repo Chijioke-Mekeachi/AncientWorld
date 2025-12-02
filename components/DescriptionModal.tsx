@@ -12,19 +12,19 @@ export default function DescriptionModal({ ebook, isOpen, onClose, onProceedToBu
   if (!isOpen || !ebook) return null;
 
   const handleBuyClick = () => {
-    if (ebook.price <= 0) {
-      // Free or negative price -> direct download
-      if (ebook.downloadUrl) {
-        window.open(ebook.downloadUrl, '_blank');
-        onClose();
-      } else {
-        alert('Download link not available');
-      }
+  if (ebook.price <= 0) {
+    if (ebook.downloadUrl) {
+      window.open(ebook.downloadUrl, '_blank');
+      onClose();
     } else {
-      // Paid ebook -> open payment modal
-      onProceedToBuy(ebook);
+      alert('Download link not available');
     }
-  };
+  } else {
+    onClose();            // IMPORTANT FIX!
+    onProceedToBuy(ebook);
+  }
+};
+
 
   return (
     <div 
@@ -56,24 +56,27 @@ export default function DescriptionModal({ ebook, isOpen, onClose, onProceedToBu
                 {ebook.price <= 0 ? (
                   <span className="text-green-600 text-2xl font-bold"></span>
                 ) : (
-                  <span className="text-green-600 text-2xl font-bold">NGN {ebook.price.toLocaleString('en-US')}</span>
+                  <span className="text-green-600 text-2xl font-bold">
+                    NGN {ebook.price.toLocaleString('en-US')}
+                  </span>
                 )}
               </div>
               
-              {ebook.price == 0 ? (
+              {ebook.price === 0 ? (
                 <button
-                onClick={handleBuyClick}
-                className="w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-bold hover:bg-blue-700 transition duration-200"
-              >
-                View More Details
-              </button>
-              ):(
+                  onClick={handleBuyClick}
+                  className="w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-bold hover:bg-blue-700 transition duration-200"
+                >
+                  Get Now (Free)
+                </button>
+              ) : (
                 <button
-                onClick={handleBuyClick}
-                className="w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-bold hover:bg-blue-700 transition duration-200"
-              >
-                Proceed to Payments
-              </button>)}
+                  onClick={handleBuyClick}
+                  className="w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-bold hover:bg-blue-700 transition duration-200"
+                >
+                  Proceed to Payment
+                </button>
+              )}
             </div>
           </div>
 
@@ -82,10 +85,14 @@ export default function DescriptionModal({ ebook, isOpen, onClose, onProceedToBu
             <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 leading-tight">
               {ebook.title}
             </h1>
-            <p className="text-lg text-blue-600 font-semibold mb-6 border-b pb-4">By: {ebook.author}</p>
+            <p className="text-lg text-blue-600 font-semibold mb-6 border-b pb-4">
+              By: {ebook.author}
+            </p>
 
             <h2 className="text-2xl font-bold text-gray-800 mb-3">Ebook Overview</h2>
-            <p className="text-gray-600 text-base leading-relaxed mb-6">{ebook.description}</p>
+            <p className="text-gray-600 text-base leading-relaxed mb-6">
+              {ebook.description}
+            </p>
 
             <div className="flex gap-4 text-sm font-semibold text-gray-700">
               <span>📖 {ebook.pages} Chapters</span>

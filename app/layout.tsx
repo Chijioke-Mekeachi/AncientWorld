@@ -11,6 +11,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Windows To The Ancient World',
   description: 'Discover amazing ebooks that transform your knowledge',
+  icons:'/favorite.png'
 };
 
 export default function RootLayout({
